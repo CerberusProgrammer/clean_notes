@@ -1,4 +1,5 @@
-import 'package:clean_notes/theme.provider.dart';
+import 'package:clean_notes/core/config/app.router.dart';
+import 'package:clean_notes/core/theme/theme.provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,14 +10,10 @@ class MainApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ref.watch(themeProvider),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      routerConfig: appRouter,
     );
   }
 }
