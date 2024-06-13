@@ -9,9 +9,7 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            child: Text('data'),
-          )
+          Text('data'),
         ],
       ),
     );
